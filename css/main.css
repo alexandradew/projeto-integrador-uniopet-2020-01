@@ -29,11 +29,11 @@
     background: #8e44ad;
     opacity: 0.9;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .content-top {
-    opacity: 1 !important;
+    z-index: 10;
     color: #FFF;
 }
 
@@ -66,6 +66,10 @@
         background-image: url(/img/musical1.jpg);
         background-size: cover;
         background-position: center;
+    }
+
+    .content-top {
+        padding: 50px;
     }
 
     .login {
