@@ -4,8 +4,7 @@
     bottom: 35;
     width: 50px;
     height: 50px;
-    background: #9b59b6;
-    animation: move 20s infinite;
+    animation: nota 50s infinite;
     transform: rotate(25deg);
 }
 
@@ -15,8 +14,7 @@
     bottom: 0;
     width: 40px;
     height: 50px;
-    background: #9b59b6;
-    animation: move 23s infinite;
+    animation: nota 23s infinite;
     transform: rotate(25deg);
 }
 
@@ -26,7 +24,6 @@
     bottom: 0;
     width: 20px;
     height: 20px;
-    background: #9b59b6;
     animation: move 28s infinite;
     transform: rotate(25deg);
 }
@@ -37,7 +34,6 @@
     bottom: 0;
     width: 30px;
     height: 30px;
-    background: #9b59b6;
     animation: move 50s infinite;
     transform: rotate(25deg);
 }
