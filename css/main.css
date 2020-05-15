@@ -56,18 +56,22 @@
     font-family: bold;
 }
 
+.active-white {
+    font-family: bold !important;
+}
+
 .brand:hover {
     background-color: #FFF !important;
     color: #9b59b6 !important;
 }
 
 .menu-white a {
-    color: #9b59b6;
+    color: #9b59b6 !important;
 }
 
 .menu-white a:hover {
-    color: #FFF;
-    background-color: #8e44ad;
+    color: #FFF !important;
+    background-color: #8e44ad !important;
 }
 
 .dropdown-menu a {
@@ -234,14 +238,14 @@ footer a {
         font-weight: bold;
     }
 
-    .dropdown-menu a:hover {
-        background: #ecf0f1;
+    .menu-white a:hover {
+        background-color: #FFF !important;
         color: #8e44ad !important;
     }
 
     .dropdown-menu-white a:hover {
-        background: #8e44ad;
-        color: #FFF !important;
+        background-color: #FFF !important;
+        color: #8e44ad !important;
     }
 
     .content-top {
