@@ -38,7 +38,6 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-
     opacity: 0.9;
     align-items: center;
     justify-content: center !important;
@@ -53,6 +52,24 @@
     font-weight: bold;
 }
 
+.active {
+    font-family: bold;
+}
+
+.brand:hover {
+    background-color: #FFF !important;
+    color: #9b59b6 !important;
+}
+
+.menu-white a {
+    color: #9b59b6;
+}
+
+.menu-white a:hover {
+    color: #FFF;
+    background-color: #8e44ad;
+}
+
 .dropdown-menu a {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -61,6 +78,11 @@
 .dropdown-menu a:hover {
     background: #ecf0f1;
     color: #8e44ad !important;
+}
+
+.dropdown-menu-white a:hover {
+    background: #8e44ad !important;
+    color: #FFF !important;
 }
 
 .login {
@@ -196,16 +218,30 @@ footer a {
     font-size: 1.2rem;
 }
 
-
-
-
-
 @media (max-width: 990px) {
 
     .top {
         background-image: url(/img/musical1.jpg);
         background-size: cover;
         background-position: center;
+    }
+
+    #nav .login {
+        margin-bottom: 15px;
+    }
+
+    #nav a:hover {
+        font-weight: bold;
+    }
+
+    .dropdown-menu a:hover {
+        background: #ecf0f1;
+        color: #8e44ad !important;
+    }
+
+    .dropdown-menu-white a:hover {
+        background: #8e44ad;
+        color: #FFF !important;
     }
 
     .content-top {

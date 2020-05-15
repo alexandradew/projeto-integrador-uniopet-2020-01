@@ -1,13 +1,22 @@
 $(function () {
     $(document).scroll(function () {
-        $('#nav').css("border-bottom", "1px solid #9b59b6");
-        $('#nav').removeClass("navbar-dark");
-        $('#nav a').css("color", "#9b59b6");
-        $('#nav').css("background-color", "#FFF");
-        $('#nav button').addClass("btn-default");
-        $('#dropdown-menu').removeClass("bg-transparent")
-        $('#dropdown-menu a').removeClass("text-light")
-        $('#dropdown-menu a').css("color", "#9b59b6")
-        $('#dropdown-menu').css("background-color", "#FFF")
+        changeColor();
+    });
+
+    $('.navbar-toggler').click(function () {
+        changeColor();
     });
 });
+
+function changeColor() {
+    $('#nav').css("border-bottom", "1px solid #9b59b6").removeClass("navbar-dark").addClass("menu-white");
+    $('#nav').css("background-color", "#FFF");
+    $('#nav .btn').addClass("btn-default");
+    $('.navbar-brand').addClass("brand");
+
+    $('#dropdown-menu').removeClass("bg-transparent").addClass("dropdown-menu-white").css("background-color", "#FFF")
+    $('#dropdown-menu a').removeClass("text-light").css("color", "#9b59b6")
+
+    $('.navbar-toggler').removeClass("bg-transparent")
+    $('.navbar-toggler').css("background-color", "#9b59b6")
+}
