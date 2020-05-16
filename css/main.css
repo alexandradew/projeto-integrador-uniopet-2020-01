@@ -222,6 +222,13 @@ footer a {
     font-size: 1.2rem;
 }
 
+/* piano */
+
+.main-piano {
+    height: 100vh;
+
+}
+
 @media (max-width: 990px) {
 
     .top {

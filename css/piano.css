@@ -1,0 +1,353 @@
+/*html {
+    font-family: 'Condiment', cursive;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+}*/
+
+body {
+    font-size: 1.2rem;
+}
+
+.wrap {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 10px 2px 10px #090909, 2px 10px 10px #090909;
+    margin-top: 200px;
+}
+
+.controls-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.speakers {
+    width: 200px;
+    height: 5px;
+    background: #000;
+    margin: 40px 0 0;
+    box-shadow: 0 15px #000, 0 30px #000, 0 45px #000, 0 60px #000, 0 75px #000;
+}
+
+@media (max-width: 600px) {
+    .speakers {
+        display: none;
+    }
+}
+
+.controls {
+    width: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .input-container {
+    display: flex;
+}
+
+.controls .input-container h2 {
+    font-size: 1.48rem;
+}
+
+.controls .input-container .input-buttons {
+    padding: 1em 0 0 2.5em;
+}
+
+.controls .input-container .input-buttons .demo-buttons {
+    display: flex;
+}
+
+.controls .input-container .input-buttons .demo-label {
+    padding-right: 40px;
+}
+
+.controls .input-container .input-buttons button {
+    background: #7f0101;
+    border-radius: 5%;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 2px 5px;
+    cursor: pointer;
+}
+
+.controls .input-container .input-buttons button.on {
+    background: #e40202;
+    box-shadow: 0px 0px 2px 2px #b20101;
+}
+
+.controls .input-container .input-buttons button.help {
+    background: #006b10;
+}
+
+.controls .input-container .input-buttons button.help.on {
+    background: #00d11f;
+    box-shadow: 0px 0px 2px 2px #00d11f;
+}
+
+.controls .inputs {
+    display: flex;
+}
+
+.controls .inputs input {
+    padding: 0 10px;
+}
+
+.controls .inputs input.tempo {
+    transform: rotateY(180deg);
+}
+
+.controls .input-labels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls .input-labels>div {
+    padding: 0 4.5em;
+}
+
+.keyboard {
+    width: 95%;
+    height: 160px;
+    display: flex;
+    margin: 10px auto 10px;
+    position: relative;
+}
+
+.white,
+.black {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-family: sans-serif;
+}
+
+.white {
+    height: 100%;
+    width: 12.5%;
+    background-color: ivory;
+    box-shadow: 2px 7px 2px #222;
+}
+
+.white.played {
+    background-color: #ddd;
+    transform: translate(0, 2px);
+}
+
+.black {
+    height: 70%;
+    width: 3%;
+    position: absolute;
+    z-index: 2;
+    margin-left: -1.6%;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .black {
+        width: 6%;
+    }
+}
+
+.black.played {
+    background-color: #333;
+    transform: translate(0, 2px);
+}
+
+.black.black1 {
+    left: 6.7%;
+}
+
+.black.black2 {
+    left: 13.3%;
+}
+
+.black.black3 {
+    left: 26.7%;
+}
+
+.black.black4 {
+    left: 33.4%;
+}
+
+.black.black5 {
+    left: 40%;
+}
+
+.black.black6 {
+    left: 53.3%;
+}
+
+@media (max-width: 600px) {
+    .black.black6 {
+        left: 11%;
+    }
+}
+
+.black.black7 {
+    left: 60%;
+}
+
+@media (max-width: 600px) {
+    .black.black7 {
+        left: 23%;
+    }
+}
+
+.black.black8 {
+    left: 73.3%;
+}
+
+@media (max-width: 600px) {
+    .black.black8 {
+        left: 48.5%;
+    }
+}
+
+.black.black9 {
+    left: 80%;
+}
+
+@media (max-width: 600px) {
+    .black.black9 {
+        left: 61%;
+    }
+}
+
+.black.black10 {
+    left: 86.7%;
+}
+
+@media (max-width: 600px) {
+    .black.black10 {
+        left: 73%;
+    }
+}
+
+@media (max-width: 600px) {
+    .oct {
+        display: none;
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000;
+    background: #000;
+    border-radius: 0px;
+    border: 1px solid #000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000;
+    border: 1px solid #000;
+    height: 20px;
+    width: 10px;
+    border-radius: 5px;
+    background: #808080;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #000;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000;
+    background: #000;
+    border-radius: 0px;
+    border: 1px solid #000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000;
+    border: 1px solid #000;
+    height: 20px;
+    width: 10px;
+    border-radius: 5px;
+    background: #808080;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px #000;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px #000;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000;
+    border: 1px solid #000;
+    height: 20px;
+    width: 10px;
+    border-radius: 5px;
+    background: #808080;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #000;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #000;
+}
