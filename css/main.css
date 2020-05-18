@@ -60,9 +60,9 @@
     font-family: bold !important;
 }
 
-.brand:hover {
-    background-color: #FFF !important;
-    color: #9b59b6 !important;
+.navbar-brand:hover {
+    background-color: none !important;
+    color:none !important;
 }
 
 .menu-white a {
@@ -72,6 +72,15 @@
 .menu-white a:hover {
     color: #FFF !important;
     background-color: #8e44ad !important;
+    border-radius:5px;
+}
+
+.menu-white .navbar-brand  {
+    background-color: #8e44ad !important;
+    color:#FFF !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius:5px;
 }
 
 .dropdown-menu a {
