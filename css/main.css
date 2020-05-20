@@ -250,6 +250,8 @@ footer a {
     min-height: 100vh;
 }
 
+
+
 /* estilos */
 
 .styles .card-header:hover{
@@ -268,9 +270,14 @@ footer a {
     box-shadow:none;
 }
 
-
 .styles .card-header:hover button{
     color:#9b59b6;
+}
+
+/* escolas */
+
+.card-item {
+    border: 5px solid #9b59b6;
 }
 
 @media (max-width: 990px) {
@@ -315,6 +322,12 @@ footer a {
 
     .footer-box {
         padding-top: 35px;
+    }
+
+    /* escolas */
+
+    .card-item{
+        margin-top:20px;
     }
 
 
