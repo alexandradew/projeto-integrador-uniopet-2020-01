@@ -22,3 +22,5 @@ function changeColor() {
     $('.navbar-toggler').css("background-color", "#9b59b6")
     $('.navbar-toggler').css("color", "#FFF")
 }
+
+

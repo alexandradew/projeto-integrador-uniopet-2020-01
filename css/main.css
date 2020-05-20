@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.font{
+    font-size: 1.2rem;
 }
 
 .gradient {
@@ -10,6 +13,10 @@
     background: -webkit-linear-gradient(68deg, rgba(177, 24, 218, 1) 30%, rgba(212, 90, 229, 1) 100%, rgba(160, 76, 238, 1) 100%);
     background: linear-gradient(68deg, rgba(177, 24, 218, 1) 30%, rgba(212, 90, 229, 1) 100%, rgba(160, 76, 238, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b118da", endColorstr="#a04cee", GradientType=1);
+}
+
+.text-purple {
+    color: #8e44ad;
 }
 
 .purple-dark {
@@ -96,6 +103,10 @@
 .dropdown-menu-white a:hover {
     background: #8e44ad !important;
     color: #FFF !important;
+}
+
+.menu-white .nav-link .active {
+    color: #000 !important;
 }
 
 .login {
@@ -233,9 +244,33 @@ footer a {
 
 /* piano */
 
-.main-piano {
-    height: 100vh;
+.main-navigation {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
 
+/* estilos */
+
+.styles .card-header:hover{
+    background-color:#FFF !important;
+    cursor: pointer;
+}
+
+.styles button{
+    font-size:1.2rem;
+    color:#FFF;
+}
+
+.styles button:focus{
+    outline:none;
+    border:none;
+    box-shadow:none;
+}
+
+
+.styles .card-header:hover button{
+    color:#9b59b6;
 }
 
 @media (max-width: 990px) {
