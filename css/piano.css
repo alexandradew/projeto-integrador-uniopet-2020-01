@@ -11,7 +11,7 @@ body {
     background: #111;
     border-radius: 10px;
     box-shadow: 10px 2px 10px #090909, 2px 10px 10px #090909;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 .controls-container {
@@ -32,7 +32,10 @@ body {
     .speakers {
         display: none;
     }
+
 }
+
+
 
 .controls {
     width: 600px;
@@ -106,8 +109,15 @@ body {
     padding: 0 4.5em;
 }
 
+@media (max-width: 600px) {
+    .controls-container {
+        overflow: hidden;
+    }
+    
+}
+
 .keyboard {
-    width: 95%;
+    width: 90%;
     height: 160px;
     display: flex;
     margin: 10px auto 10px;
@@ -333,4 +343,15 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
     background: #000;
+}
+
+.demo-button{
+    cursor: pointer;
+    background-color:#8e44ad;
+    padding: 15px;
+    border-radius:15px;
+}
+
+.demo-button:hover{
+    background-color:#9b59b6;
 }

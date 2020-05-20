@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //Create new audio context when note played
   function playNote(note, length) {
     var AudioContext = window.AudioContext || window.webkitAudioContext,
-        ctx = new AudioContext(),
-        oscillator = ctx.createOscillator(),
-        gainNode = ctx.createGain();
+      ctx = new AudioContext(),
+      oscillator = ctx.createOscillator(),
+      gainNode = ctx.createGain();
     oscillator.type = 'triangle';
     oscillator.frequency.value = note;
     gainNode.gain.value = volume;
