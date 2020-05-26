@@ -330,6 +330,7 @@ footer a {
     border: 1px solid #9b59b6;
     color: #9b59b6;
     outline:none;
+    margin-top:5px;
 }
 .btn-music:hover{
     background: #9b59b6;
