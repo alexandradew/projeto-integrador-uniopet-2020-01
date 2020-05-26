@@ -6,7 +6,13 @@ $(function () {
     $('.navbar-toggler').click(function () {
         changeColor();
     });
+
+    $('#logged').hover(function () {
+        changeColor();
+    });
 });
+
+// changes menu colors when scrolled or clicked
 
 function changeColor() {
     $('#nav').css("border-bottom", "1px solid #9b59b6").addClass("menu-white");
@@ -14,6 +20,9 @@ function changeColor() {
     $('#nav .btn').addClass("btn-default");
     $('.navbar-brand').addClass("brand");
     $('.active').addClass("active-white");
+    $('#logged').css("color", "#9b59b6");
+    $('.user-options').css("background", "#FFF");
+    $('.user-options ul li a').css("color", "#9b59b6");
 
     $('#dropdown-menu').removeClass("bg-transparent").addClass("dropdown-menu-white").css("background-color", "#FFF")
     $('#dropdown-menu a').removeClass("text-light").css("color", "#9b59b6")
@@ -23,4 +32,44 @@ function changeColor() {
     $('.navbar-toggler').css("color", "#FFF")
 }
 
+// check login
 
+function logOff() {
+    isLogged = false;
+
+    if (isLogged) {
+        $('#login').addClass("hide");
+        $('#logged').addClass("show");
+    } else {
+        $('#login').addClass("show");
+        $('#logged').addClass("hide");
+    }
+}
+
+function logIn() {
+    isLogged = true;
+
+    if (isLogged) {
+        $('#login').addClass("hide");
+        $('#logged').addClass("show");
+        $('#cadastro').addClass("hide");
+    } else {
+        $('#login').addClass("show");
+        $('#logged').addClass("hide");
+    }
+}
+
+
+$('#logged').hover(function () {
+    $('.user-options').toggle();
+});
+
+// simulates login after sign in
+
+$('#cadastroBtn').click(function () {
+    logIn();
+})
+
+function btnActive(e) {
+    $(e).addClass("btn-music-active");
+}

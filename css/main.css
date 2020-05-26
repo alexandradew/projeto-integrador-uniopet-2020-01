@@ -1,18 +1,56 @@
 * {
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+#logged{
+    cursor:pointer;
+}
+
+#loginIndex{
+    display: none;
+}
+
+.user-options{
+    position: absolute;
+    height: auto;
+    width: 180px;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    display: none;
+}
+
+.user-options ul{
+    margin-top:25px;
+    margin-left:-35px !important;
+}
+
+.user-options ul li{
+    margin-top:10px;
+    list-style: none;
+}
+
+.user-options ul li a {
+    color:#FFF;
+    padding:10px;
+}
+
+.user-options ul li a:hover {
+    background-color: transparent !important;
+    color:#9b59b6 !important;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .font{
     font-size: 1.2rem;
-}
-
-.gradient {
-    background: rgb(177, 24, 218);
-    background: -moz-linear-gradient(68deg, rgba(177, 24, 218, 1) 30%, rgba(212, 90, 229, 1) 100%, rgba(160, 76, 238, 1) 100%);
-    background: -webkit-linear-gradient(68deg, rgba(177, 24, 218, 1) 30%, rgba(212, 90, 229, 1) 100%, rgba(160, 76, 238, 1) 100%);
-    background: linear-gradient(68deg, rgba(177, 24, 218, 1) 30%, rgba(212, 90, 229, 1) 100%, rgba(160, 76, 238, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b118da", endColorstr="#a04cee", GradientType=1);
 }
 
 .text-purple {
@@ -67,6 +105,10 @@
     font-family: bold !important;
 }
 
+nav{
+    transition: 0.5s;
+}
+
 .navbar-brand:hover {
     background-color: none !important;
     color:none !important;
@@ -110,6 +152,7 @@
 }
 
 .login {
+    color:#FFF;
     margin-left: 50px;
 }
 
@@ -278,6 +321,24 @@ footer a {
 
 .card-item {
     border: 5px solid #9b59b6;
+}
+
+/* alterar dados */
+
+.btn-music{
+    background: #FFF;
+    border: 1px solid #9b59b6;
+    color: #9b59b6;
+    outline:none;
+}
+.btn-music:hover{
+    background: #9b59b6;
+    color: #FFF;
+}
+
+.btn-music-active {
+    background: #9b59b6;
+    color: #FFF;
 }
 
 @media (max-width: 990px) {

@@ -4,28 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicAll</title>
+    <title>MusicAll - Alterar dados</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <!-- <link rel="stylesheet" href="/css/animations.css" /> -->
 </head>
 
-<body>
-    <div class="top-bg purple-clear">
-        <div class="content-top">
-            <h1>Onde surgiu a música que você ouve?</h1>
-        </div>
-        <!--
-        <img src="img/nota.png" class="shape">
-        <img src="img/nota.png" class="shape-2">
-        <img src="img/nota.png" class="shape-3">
-        <img src="img/nota.png" class="shape-4">
-        -->
-    </div>
-    <div class="top container-fluid">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+<body class="font">
+    <div class=" container-fluid">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top  purple-clear">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><i class="fas fa-headphones-alt"></i> MusicAll </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -61,14 +49,14 @@
                             <a class="nav-link" href="lojas.html">Lojas</a>
                         </li>
                     </ul>
-                    <div id="login" class="login justify-content-end">
+                    <div id="login" class="login justify-content-end hide">
                         <a href="login.html"><button class="btn" data-toggle="modal"
                                 data-target="#exampleModal><i class=" fas fa-sign-in-alt"></i>
                                 Login</button></a>
                         <a href="index.html#cadastro"><button class="btn"><i class="fas fa-user-plus"></i>
                                 Cadastre-se</button></a>
                     </div>
-                    <div id="logged" class="login justify-content-end hide">
+                    <div id="logged" class="login justify-content-end">
                         Bem vindo, Usuário <i class="fas fa-user-circle"></i>
                         <div class="user-options">
                             <ul>
@@ -83,116 +71,54 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </nav>
-
     </div>
-    <section class="piano-home container mt-5">
-        <div class="row">
-            <div class="col-lg-6">
-                <h2>Aprenda com a gente</h2>
-                <p>Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então é... é... Já vivi muito sem
-                    dinheiro, já vivi muito com dinheiro. -Jornalista: Coloca esse dinheiro na poupança que a senhora
-                    ganha R$10 mil por mês. -Dilma: O que que é R$10 mil?</p>
-            </div>
-            <div class="col-lg-6">
-                <h2>Piano digital</h2>
-                <img class="mt-2" src="img/piano.png" width="100%" />
-                <a href="piano.html"><button class="btn btn-default mt-3">Tocar agora!</button></a>
-            </div>
-        </div>
-    </section>
-    <div class="division container-fluid purple-clear">
 
-    </div>
-    <section class="study container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Quer estudar música?</h2>
-                <div class="row pt-3">
-                    <div class="col-md-6">
-                        <h4>Encontre uma escola</h4>
-                        <p>Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então é... é...
-                            Já vivi
-                            muito
-                            sem
-                            dinheiro.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Encontre uma escola</h4>
-                        <p>Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então é... é...
-                            Já vivi
-                            muito
-                            sem
-                            dinheiro.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Encontre uma escola</h4>
-                        <p>Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então é... é...
-                            Já vivi
-                            muito
-                            sem
-                            dinheiro.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Encontre uma escola</h4>
-                        <p>Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então é... é...
-                            Já vivi
-                            muito
-                            sem
-                            dinheiro.</p>
-                    </div>
-
+    <div class="main-navigation">
+        <div class="container edit-user">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mt-5 text-purple font-weight-bold">Alterar dados </h1>
+                    <form class="mt-5">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Nome de usuário</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" value="Usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput1">E-mail</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput1" value="email@email.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Senha atual</label>
+                            <input type="password" class="form-control" id="formGroupExampleInput2"
+                                placeholder="Senha atual" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput3">Nova senha</label>
+                            <input type="password" class="form-control" id="formGroupExampleInput3"
+                                placeholder="Nova senha" required>
+                        </div>
+                        <button type="submit" id="cadastroBtn" class="btn btn-default">Salvar</button>
+                    </form>
                 </div>
-
-            </div>
-        </div>
-
-    </section>
-    <div class="division container-fluid purple-clear">
-
-    </div>
-
-    <div id="cadastro" class="sign-up container">
-        <div class="row">
-            <!-- cadastro -->
-            <div class="col-lg-6">
-                <h2 class="text-center">Cadastre-se </h2>
-                <form class="mt-5">
-                    <div class="form-group">
-                        <label for="formGroupExampleInput">Nome de usuário</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: musicall25"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">E-mail</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput1"
-                            placeholder="Ex: musicall@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Senha</label>
-                        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Senha"
-                            required>
-                    </div>
-                    <button type="submit" id="cadastroBtn" class="btn btn-default">Cadastrar</button>
-                    <p class="mt-3">Já tem conta? <a href="login.html">Faça login</a></p>
-                </form>
-            </div>
-
-            <div class="col-lg-6 social-login">
-                <h2 class="text-center">Ou faça login com sua rede social favorita </h2>
-                <div class="mt-5 text-center">
-                    <i onClick="logIn()" class="fab fa-facebook-square"></i>
-                    <i onClick="logIn()" class="fab fa-linkedin"></i>
-                    <i onClick="logIn()" class="fab fa-twitter-square"></i>
+                <div class="col-lg-6">
+                    <h1 class="mt-5 text-purple font-weight-bold">Preferências musicais</h1>
+                    <p>Clique para definir os gêneros favoritos</p>
+                    <button onClick="btnActive(this)" class="btn-music btn">Classica</button>
+                    <button onClick="btnActive(this)" class="btn-music btn">Pagode</button>
+                    <button onClick="btnActive(this)" class="btn-music btn">Sertanejo</button>
+                    <button onClick="btnActive(this)" class="btn-music btn">Rock</button>
+                    <button onClick="btnActive(this)" class="btn-music btn">Indie</button>
+                    <button onClick="btnActive(this)" class="btn-music btn">Funk</button>
+                    <br><br>
+                    <button type="submit" id="cadastroBtn" class="btn btn-default">Salvar preferências</button>
                 </div>
             </div>
         </div>
     </div>
+
     <footer class="container-fluid">
         <div class="container text-center">
             <div class="row">
