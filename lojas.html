@@ -13,9 +13,9 @@
 
 <body class="font">
     <div class="container-fluid">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top purple-clear">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top  purple-clear">
             <div class="container">
-                <a class="navbar-brand" href="index.html">MusicAll</a>
+                <a class="navbar-brand" href="index.html"><i class="fas fa-headphones-alt"></i> MusicAll </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
@@ -42,21 +42,35 @@
                             <a class="nav-link" href="piano.html">Piano digital</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="escolas.html">Escolas <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="escolas.html">Escolas</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="lojas.html">Lojas</a>
                         </li>
                     </ul>
-                    <div class="login justify-content-end">
-                        <a href="login.html"><button class="btn"><i class="fas fa-sign-in-alt"></i> Login</button></a>
-                        <a href="cadastro.html"><button class="btn"><i class="fas fa-user-plus"></i>
+                    <div id="login" class="login justify-content-end">
+                        <a href="login.html"><button class="btn"><i class=" fas fa-sign-in-alt"></i>
+                                Login</button></a>
+                        <a href="index.html#cadastro"><button class="btn"><i class="fas fa-user-plus"></i>
                                 Cadastre-se</button></a>
+                    </div>
+                    <div id="logged" class="login justify-content-end hide">
+                        Bem vindo, Usuário <i class="fas fa-user-circle"></i>
+                        <div class="user-options">
+                            <ul>
+                                <li>
+                                    <a href="editar-conta.html"><i class="fas fa-user-edit"></i> Alterar dados</a>
+                                </li>
+                                <li>
+                                    <a href="index.html"><i class="fas fa-sign-out-alt" onClick="logOff();"></i>
+                                        Sair</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
-
     </div>
 
     <section class="main-navigation mt-5">
