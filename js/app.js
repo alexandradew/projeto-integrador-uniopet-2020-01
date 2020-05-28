@@ -59,16 +59,22 @@ function logIn() {
     }
 }
 
+function redirect() {
+    window.location.href = 'index-logado.html';
+}
+
+function redirectAnunciante() {
+    window.location.href = 'index-logado-anunciante.html';
+}
+
+function redirectAdmin() {
+    window.location.href = 'painel.html';
+}
 
 $('#logged').hover(function () {
     $('.user-options').toggle();
 });
 
-// simulates login after sign in
-
-$('#cadastroBtn').click(function () {
-    logIn();
-})
 
 function btnActive(e) {
     $(e).addClass("btn-music-active");

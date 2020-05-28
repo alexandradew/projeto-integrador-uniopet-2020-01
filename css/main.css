@@ -2,6 +2,8 @@
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* usuario e logn */
+
 .hide{
     display: none !important;
 }
@@ -25,10 +27,11 @@
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
     display: none;
+    border:1px solid #c6c6c6;
 }
 
 .user-options ul{
-    margin-top:25px;
+    margin-top:15px;
     margin-left:-35px !important;
 }
 
@@ -47,6 +50,10 @@
     color:#9b59b6 !important;
     text-decoration: none;
     font-weight: bold;
+}
+
+.form-login{
+    
 }
 
 .font{
