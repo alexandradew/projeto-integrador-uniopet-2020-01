@@ -52,10 +52,6 @@
     font-weight: bold;
 }
 
-.form-login{
-    
-}
-
 .font{
     font-size: 1.2rem;
 }
@@ -347,6 +343,14 @@ footer a {
 .btn-music-active {
     background: #9b59b6;
     color: #FFF;
+}
+
+#novo-anuncio{
+    display: none;
+}
+
+#editar-anuncio{
+    display: none;
 }
 
 @media (max-width: 990px) {

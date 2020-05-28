@@ -79,3 +79,11 @@ $('#logged').hover(function () {
 function btnActive(e) {
     $(e).addClass("btn-music-active");
 }
+
+function newAnuncio() {
+    $('#novo-anuncio').toggle(1000);
+}
+
+function editAnuncio() {
+    $('#editar-anuncio').toggle(1000);
+}

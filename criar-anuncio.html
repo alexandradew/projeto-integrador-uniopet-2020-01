@@ -57,7 +57,7 @@
                                         dados</a>
                                 </li>
                                 <li>
-                                    <a href="criar-anuncio.html"><i class="fas fa-bullhorn"></i> Criar anúncio</a>
+                                    <a href="criar-anuncio.html"><i class="fas fa-bullhorn"></i> Anúncios</a>
                                 </li>
                                 <li>
                                     <a href="index.html"><i class="fas fa-sign-out-alt" onClick="logOff();"></i>
@@ -74,21 +74,54 @@
     <div class="main-navigation">
         <div class="container edit-user">
             <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="mt-5 text-purple font-weight-bold">Criar anúncio</h1>
+                <div class="col-lg-12">
+                    <h1 class="mt-5 text-purple font-weight-bold">Seus anúncios</h1>
+                    <table class="table mt-5">
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Nº</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Valor total</th>
+                                <th scope="col">Valor diário</th>
+                                <th scope="col">Data criação</th>
+                                <th scope="col">Dias restantes</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mozzart School</td>
+                                <td>R$ 500,00</td>
+                                <td>R$ 1,00</td>
+                                <td>27/05/2020</td>
+                                <td>500 dias</td>
+                                <td>Aprovado</td>
+                                <td>
+                                    <button onClick="editAnuncio()" class="btn btn-warning"><i
+                                            class="far fa-edit"></i></button>
+                                    <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button onClick="newAnuncio()" class="btn btn-default">Novo anúncio</button>
+                </div>
+                <div id="novo-anuncio" class="col-lg-6">
+                    <h1 class="mt-5 text-purple font-weight-bold">Criar novo anúncio</h1>
                     <form class="mt-4">
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Nome da escola/loja</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome"
-                                required>
+                            <label for="nome-novo">Nome da escola/loja</label>
+                            <input type="text" class="form-control" id="nome-novo" placeholder="Nome" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Endereço</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Endereço"
-                                required>
+                            <label for="endereco-novo">Endereço</label>
+                            <input type="text" class="form-control" id="endereco-novo" placeholder="Endereço" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput3">Cidade</label><br>
+                            <label for="cidade-novo">Cidade</label><br>
                             <select class="form-control">
                                 <option>Selecione uma cidade</option>
                                 <option>Curitiba</option>
@@ -97,40 +130,132 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Telefone</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" value="(xx) XXXX-XXXX"
+                            <label for="telefone-novo">Telefone</label>
+                            <input type="text" class="form-control" id="telefone-novo" placeholder="(XX) XXXX-XXXX"
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <label for="formGroupExampleInput1">E-mail</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput1" value="email@email.com"
+                            <label for="email-novo">E-mail</label>
+                            <input type="text" class="form-control" id="email-novo" placeholder="email@email.com"
                                 required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput3">Tipo de anúncio</label><br>
+                            <label for="tipo-novo">Tipo de anúncio</label><br>
                             <select class="form-control">
                                 <option>Selecione um tipo de anúncio</option>
                                 <option>Escola</option>
                                 <option>Loja</option>
-                                <option>Ainda não decidi</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Senha atual (Obrigatório)</label>
-                            <input type="password" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Senha atual" required>
+                            <label for="valor-novo">Valor</label><br>
+                            <select class="form-control">
+                                <option>Selecione um valor para cobrança</option>
+                                <option>R$ 50,00</option>
+                                <option>R$ 100,00</option>
+                                <option>R$ 200,00</option>
+                                <option>R$ 500,00</option>
+                                <option>R$ 1000,00</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Foto da escola/loja</label>
+                            <label for="valor-diario-novo">Valor diário (Quantia máxima a ser utilizada por
+                                dia)</label>
+                            <input type="text" class="form-control" id="valor-diario-novo" placeholder="R$ 10,00"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="foto-novo">Foto da escola/loja</label>
                             <input class="" type="file">
+                        </div>
+                        <div class="form-group">
+                            <label for="link-novo">Link do site</label>
+                            <input type="text" class="form-control" id="link-novo" placeholder="www.mozzart.com.br"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha-novo">Senha atual (Obrigatório)</label>
+                            <input type="password" class="form-control" id="senha-novo" placeholder="Senha atual"
+                                required>
                         </div>
                         <button type="submit" id="cadastroBtn" class="btn btn-default">Enviar para análise</button>
                     </form>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="mt-5 text-purple font-weight-bold">Informações para anunciantes</h1>
 
+                <div id="editar-anuncio" class="col-lg-6">
+                    <h1 class="mt-5 text-purple font-weight-bold">Editar anúncio</h1>
+                    <form class="mt-4">
+                        <div class="form-group">
+                            <label for="nome-editar">Nome da escola/loja</label>
+                            <input type="text" class="form-control" id="nome-editar" value="Mozzart School" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco-editar">Endereço</label>
+                            <input type="text" class="form-control" id="endereco-editar" value="Rua dos bobos, 0"
+                                required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade-editar">Cidade</label><br>
+                            <select class="form-control">
+                                <option>Selecione uma cidade</option>
+                                <option selected>Curitiba</option>
+                                <option>São Paulo</option>
+                                <option>Porto Alegre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone-editar">Telefone</label>
+                            <input type="text" class="form-control" id="telefone-editar" value="(41) 444-4444" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-editar">E-mail</label>
+                            <input type="text" class="form-control" id="email-editar" value="contato@mozzart.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-editar">Tipo de anúncio</label><br>
+                            <select class="form-control">
+                                <option>Selecione um tipo de anúncio</option>
+                                <option selected>Escola</option>
+                                <option>Loja</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="valor-editar">Adicionar valor total - Atual (R$ 500,00)</label><br>
+                            <select class="form-control">
+                                <option>Selecione um valor para adicionar</option>
+                                <option>R$ 50,00</option>
+                                <option>R$ 100,00</option>
+                                <option>R$ 200,00</option>
+                                <option>R$ 500,00</option>
+                                <option>R$ 1000,00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="valor-diario-editar">Valor diário</label><br>
+                            <input type="text" class="form-control" id="valor-diario-editar" value="R$ 1,00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="foto-editar">Mudar foto da escola/loja</label>
+                            <img src="img/escola.jpg">
+                            <input type="file" class="mt-2">
+                        </div>
+                        <div class="form-group">
+                            <label for="link-editar">Link do site</label>
+                            <input type="text" class="form-control" id="link-editar" value="www.mozzart.com.br"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha-editar">Senha atual (Obrigatório)</label>
+                            <input type="password" class="form-control" id="senha-editar" placeholder="Senha atual"
+                                required>
+                        </div>
+                        <button type="submit" id="cadastroBtn" class="btn btn-default">Enviar modificação para
+                            análise</button>
+                    </form>
                 </div>
             </div>
         </div>
