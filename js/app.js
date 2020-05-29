@@ -87,3 +87,7 @@ function newAnuncio() {
 function editAnuncio() {
     $('#editar-anuncio').toggle(1000);
 }
+
+function showEditUser() {
+    $('#painel-edit-user').toggle(1000);
+}

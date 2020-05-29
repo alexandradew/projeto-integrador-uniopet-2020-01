@@ -52,94 +52,24 @@
         </nav>
 
         <div class="main-navigation container mt-5">
-            <h1 class="mt-5 text-purple font-weight-bold">Usuários </h1>
-            <table class="table mt-5">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Usuário</th>
-                        <th scope="col">Nome completo</th>
-                        <th scope="col">CNPJ</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Anúncios</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>zezin</td>
-                        <td>Jose da silva</td>
-                        <td>444.444.444.444</td>
-                        <td>jose@gmail.com</td>
-                        <td><a href="painel-usuario-unico.html">(1)Visualizar</a></td>
-                        <td>
-                            <button onClick="showEditUser()" class="btn btn-warning"><i
-                                    class="far fa-edit"></i></button>
-                            <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Alex</td>
-                        <td>***</td>
-                        <td>***</td>
-                        <td>alex@alex.com</td>
-                        <td>***</td>
-                        <td>
-                            <button onClick="showEditUser()" class="btn btn-warning"><i
-                                    class="far fa-edit"></i></button>
-                            <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Naeltim</td>
-                        <td>***</td>
-                        <td>***</td>
-                        <td>Naeltim@naeltim.com</td>
-                        <td>***</a></td>
-                        <td>
-                            <button onClick="showEditUser()" class="btn btn-warning"><i
-                                    class="far fa-edit"></i></button>
-                            <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Sherllen</td>
-                        <td>***</td>
-                        <td>***</td>
-                        <td>Sherllen@sherllen.com</td>
-                        <td>***</a></td>
-                        <td>
-                            <button onClick="showEditUser()" class="btn btn-warning"><i
-                                    class="far fa-edit"></i></button>
-                            <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
             <div class="col-lg-6">
-
-                <form class="mt-4" id="painel-edit-user">
-                    <h1 class="mt-5 text-purple font-weight-bold">Editar usuário</h1>
+                <h1 class="mt-5 text-purple font-weight-bold">Alterar dados </h1>
+                <form class="mt-4">
                     <div class="form-group">
                         <label for="user">Nome de usuário</label>
-                        <input type="text" class="form-control" id="user" placeholder="Usuário" required>
+                        <input type="text" class="form-control" id="user" value="Admin" required>
                     </div>
                     <div class="form-group">
-                        <label for="nome">Nome completo</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Zezin dos santos" required>
+                        <label for="mail">E-mail de recuperação</label>
+                        <input type="text" class="form-control" id="mail" value="email@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="cnpj">CNPJ</label>
-                        <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" required>
+                        <label for="senha">Senha atual *(Obrigatório)</label>
+                        <input type="text" class="form-control" id="senha" placeholder="senha" required>
                     </div>
                     <div class="form-group">
-                        <label for="mail">E-mail</label>
-                        <input type="text" class="form-control" id="mail" placeholder="email@email.com" required>
+                        <label for="nova-senha">Senha atual *(Obrigatório)</label>
+                        <input type="text" class="form-control" id="nova-senha" placeholder="Nova senha" required>
                     </div>
                     <button type="submit" id="cadastroBtn" class="btn btn-default">Salvar</button>
                 </form>

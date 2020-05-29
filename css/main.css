@@ -353,6 +353,10 @@ footer a {
     display: none;
 }
 
+#painel-edit-user{
+    display:none;
+}
+
 @media (max-width: 990px) {
 
     .top {
