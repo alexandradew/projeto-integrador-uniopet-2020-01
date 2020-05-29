@@ -149,6 +149,20 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="foto-novo">Foto da escola/loja</label>
+                            <input class="" type="file">
+                        </div>
+                        <div class="form-group">
+                            <label for="link-novo">Link do site</label>
+                            <input type="text" class="form-control" id="link-novo" placeholder="www.mozzart.com.br"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha-novo">Senha atual (Obrigatório)</label>
+                            <input type="password" class="form-control" id="senha-novo" placeholder="Senha atual"
+                                required>
+                        </div>
+                        <div class="form-group">
                             <label for="valor-novo">Valor</label><br>
                             <select class="form-control">
                                 <option>Selecione um valor para cobrança</option>
@@ -166,20 +180,18 @@
                                 required>
                         </div>
                         <div class="form-group">
-                            <label for="foto-novo">Foto da escola/loja</label>
-                            <input class="" type="file">
-                        </div>
-                        <div class="form-group">
-                            <label for="link-novo">Link do site</label>
-                            <input type="text" class="form-control" id="link-novo" placeholder="www.mozzart.com.br"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="senha-novo">Senha atual (Obrigatório)</label>
-                            <input type="password" class="form-control" id="senha-novo" placeholder="Senha atual"
-                                required>
+                            <label for="forma-pagamento">Forma de pagamento</label>
+                            <br>
+                            <label>
+                                <i class="fas fa-barcode"></i> Boleto <input type="radio" name="forma-pagamento">
+                            </label>
+                            <label class="ml-3">
+                                <i class="far fa-credit-card"></i> Cartão de crédito <input type="radio"
+                                    name="forma-pagamento">
+                            </label>
                         </div>
                         <button type="submit" id="cadastroBtn" class="btn btn-default">Enviar para análise</button>
+                        <p class="mt-2"><b>* Ao clicar em enviar você será redirecionado a página de pagamento.</b></p>
                     </form>
                 </div>
 
@@ -223,17 +235,7 @@
                                 <option>Loja</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="valor-editar">Adicionar valor total - Atual (R$ 500,00)</label><br>
-                            <select class="form-control">
-                                <option>Selecione um valor para adicionar</option>
-                                <option>R$ 50,00</option>
-                                <option>R$ 100,00</option>
-                                <option>R$ 200,00</option>
-                                <option>R$ 500,00</option>
-                                <option>R$ 1000,00</option>
-                            </select>
-                        </div>
+
                         <div class="form-group">
                             <label for="valor-diario-editar">Valor diário</label><br>
                             <input type="text" class="form-control" id="valor-diario-editar" value="R$ 1,00" required>
@@ -253,8 +255,32 @@
                             <input type="password" class="form-control" id="senha-editar" placeholder="Senha atual"
                                 required>
                         </div>
+                        <div class="form-group">
+                            <label for="valor-editar">Adicionar fundos - Atual (R$ 500,00)</label><br>
+                            <select class="form-control">
+                                <option>Selecione um valor para adicionar</option>
+                                <option>R$ 50,00</option>
+                                <option>R$ 100,00</option>
+                                <option>R$ 200,00</option>
+                                <option>R$ 500,00</option>
+                                <option>R$ 1000,00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="forma-pagamento">Forma de pagamento</label>
+                            <br>
+                            <label>
+                                <i class="fas fa-barcode"></i> Boleto <input type="radio" name="forma-pagamento">
+                            </label>
+                            <label class="ml-3">
+                                <i class="far fa-credit-card"></i> Cartão de crédito <input type="radio"
+                                    name="forma-pagamento">
+                            </label>
+                        </div>
                         <button type="submit" id="cadastroBtn" class="btn btn-default">Enviar modificação para
                             análise</button>
+                        <p class="mt-2"><b>* Selecionando adição de novos fundos você será redirecionado a página de
+                                pagamento.</b></p>
                     </form>
                 </div>
             </div>
