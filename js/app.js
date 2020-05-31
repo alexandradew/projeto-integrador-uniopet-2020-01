@@ -64,7 +64,7 @@ function redirect() {
 }
 
 function redirectAnunciante() {
-    window.location.href = 'index-logado-anunciante.html';
+    window.location.href = 'criar-anuncio.html';
 }
 
 function redirectAdmin() {
