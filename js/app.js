@@ -12,7 +12,7 @@ $(function () {
     });
 });
 
-// changes menu colors when scrolled or clicked
+// mudanças no menu ao clicar
 
 function changeColor() {
     $('#nav').css("border-bottom", "1px solid #9b59b6").addClass("menu-white");
@@ -32,32 +32,7 @@ function changeColor() {
     $('.navbar-toggler').css("color", "#FFF")
 }
 
-// check login
-
-function logOff() {
-    isLogged = false;
-
-    if (isLogged) {
-        $('#login').addClass("hide");
-        $('#logged').addClass("show");
-    } else {
-        $('#login').addClass("show");
-        $('#logged').addClass("hide");
-    }
-}
-
-function logIn() {
-    isLogged = true;
-
-    if (isLogged) {
-        $('#login').addClass("hide");
-        $('#logged').addClass("show");
-        $('#cadastro').addClass("hide");
-    } else {
-        $('#login').addClass("show");
-        $('#logged').addClass("hide");
-    }
-}
+// redirecionamento login
 
 function firstLogin() {
     window.location.href = 'primeiro-login.html';
