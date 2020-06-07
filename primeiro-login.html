@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MusicAll - Login</title>
+  <title>MusicAll - Alterar dados</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" />
   <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
@@ -12,7 +12,7 @@
 </head>
 
 <body class="font">
-  <div class="container-fluid">
+  <div class=" container-fluid">
     <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top  purple-clear">
       <div class="container">
         <a class="navbar-brand" href="index.html"><i class="fas fa-headphones-alt"></i> MusicAll </a>
@@ -23,7 +23,7 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
@@ -40,29 +40,25 @@
             <li class="nav-item">
               <a class="nav-link" href="piano.html">Piano digital</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="escolas.html">Escolas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="lojas.html">Lojas</a>
             </li>
           </ul>
-          <div id="login" class="login justify-content-end">
+          <div id="login" class="login justify-content-end hide">
             <a href="login.html"><button class="btn"><i class=" fas fa-sign-in-alt"></i>
                 Login</button></a>
             <a href="index.html#cadastro"><button class="btn"><i class="fas fa-user-plus"></i>
                 Cadastre-se</button></a>
           </div>
-          <div id="logged" class="login justify-content-end hide">
+          <div id="logged" class="login justify-content-end">
             Bem vindo, Usuário <i class="fas fa-user-circle"></i>
             <div class="user-options">
               <ul>
                 <li>
-                  <a href="editar-conta-anunciante.html"><i class="fas fa-user-edit"></i> Alterar
-                    dados</a>
-                </li>
-                <li>
-                  <a href="criar-anuncio.html"><i class="fas fa-bullhorn"></i> Criar anúncio</a>
+                  <a href="editar-conta.html"><i class="fas fa-user-edit"></i> Alterar dados</a>
                 </li>
                 <li>
                   <a href="index.html"><i class="fas fa-sign-out-alt" onClick="logOff();"></i>
@@ -74,38 +70,26 @@
         </div>
       </div>
     </nav>
-
   </div>
 
-  <section class="main-navigation mt-5">
-    <div class="container">
-      <h3 class="text-purple font-weight-bold mt-5">Insira seu usuário e senha para continuar</h3>
+  <div class="main-navigation">
+    <div class="container edit-user">
       <div class="row">
-        <div class="col-lg-12">
-          <form class="form-login">
-            <input class="form-control mt-1" type="text" value="Usuário" required>
-            <input class="form-control mt-1" type="text" value="Senha" required>
-          </form>
-          <button type="submit" onClick="redirect()" class="btn btn-default mt-2">Entrar</button>
-          <button class="btn btn-default mt-2">Esqueci a senha</button>
-
-
-          <h5 class="mt-5">Simulações:</h5>
-          <button onClick="redirect()" class="btn btn-default mt-2">Usuário comum</button>
-          <button onClick="redirectAnunciante()" class="btn btn-default mt-2">Anunciante</button>
-          <button onClick="redirectAdmin()" class="btn btn-default mt-2">Administrador</button>
-        </div>
-        <div class="col-lg-12 social-login mt-5">
-          <h3 class="text-purple font-weight-bold">Ou faça login com sua rede social favorita </h3>
-          <div class="">
-            <i onClick="redirect()" class="fab fa-facebook-square"></i>
-            <i onClick="redirect()" class="fab fa-linkedin"></i>
-            <i onClick="redirect()" class="fab fa-twitter-square"></i>
-          </div>
+        <div class="col-lg-6">
+          <h1 class="mt-5 text-purple font-weight-bold">Obrigado por se cadastrar!</h1>
+          <p class="mt-4">Clique para definir os gêneros favoritos.</p>
+          <button onClick="btnActive(this)" class="btn-music btn">Classica</button>
+          <button onClick="btnActive(this)" class="btn-music btn">Pagode</button>
+          <button onClick="btnActive(this)" class="btn-music btn">Sertanejo</button>
+          <button onClick="btnActive(this)" class="btn-music btn">Rock</button>
+          <button onClick="btnActive(this)" class="btn-music btn">Indie</button>
+          <button onClick="btnActive(this)" class="btn-music btn">Funk</button>
+          <br><br>
+          <button type="submit" id="cadastroBtn" class="btn btn-default">Salvar preferências</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <footer class="container-fluid">
     <div class="container text-center">
@@ -132,7 +116,7 @@
 
         </div>
         <div class="col-lg-4 footer-box">
-          <h3><i class="far fa-bell"></i> Recebas as novidades</h3>
+          <h3><i class="far fa-bell"></i>Recebas as novidades</h3>
           <form>
             <input type="text" class="form-control mt-3" placeholder="Ex: musicall@gmail.com" required />
             <button class="mt-2 btn btn-default btn-block">Inscrever-se</button>

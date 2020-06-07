@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var blackKey = Array.from(document.querySelectorAll('.black'));
   var whiteKey = Array.from(document.querySelectorAll('.white'));
   var help = document.querySelector('.help');
+  var record = document.querySelector('.record');
   var key = Array.from(document.querySelectorAll('.key'));
   var volume = 0.5;
   //Lower value = faster speed

@@ -59,6 +59,10 @@ function logIn() {
     }
 }
 
+function firstLogin() {
+    window.location.href = 'primeiro-login.html';
+}
+
 function redirect() {
     window.location.href = 'index-logado.html';
 }
