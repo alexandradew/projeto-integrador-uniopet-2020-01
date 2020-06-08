@@ -50,6 +50,8 @@ function redirectAdmin() {
     window.location.href = 'painel.html';
 }
 
+// menu do usuário logado
+
 $('#logged').hover(function () {
     $('.user-options').toggle();
 });

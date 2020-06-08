@@ -2,7 +2,7 @@
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* usuario e logn */
+/* usuario e login */
 
 .hide{
     display: none !important;
@@ -11,6 +11,8 @@
 .show{
     display: block !important;
 }
+
+/* user options */
 
 #logged{
     cursor:pointer;
@@ -296,8 +298,6 @@ footer a {
     min-height: 100vh;
 }
 
-
-
 /* estilos */
 
 .styles .card-header:hover{
@@ -405,6 +405,8 @@ footer a {
     .card-item{
         margin-top:20px;
     }
+
+    /* tabelas de admin & anunciante */
 
     .hide-mobile{
         display: none;
