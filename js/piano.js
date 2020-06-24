@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var blackKey = Array.from(document.querySelectorAll('.black'));
   var whiteKey = Array.from(document.querySelectorAll('.white'));
   var help = document.querySelector('.help');
-  var record = document.querySelector('.record');
+  var stopDemo = document.querySelector('.stop');
   var key = Array.from(document.querySelectorAll('.key'));
   var volume = 0.5;
   //Lower value = faster speed
@@ -91,8 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
     playNote(key, length);
   }
 
+
   //add each note to setinterval and playNote
   function demo(arr, e) {
+    if (setStop) {
+      return
+    }
     var noteLength = 0;
     e.target.classList.add('on');
     tempoInput.disabled = true;
@@ -102,24 +106,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var _loop = function _loop(i) {
       noteLength += arr[i - 1][2] * tempo;
+
       setTimeout(function () {
-        playNote(arr[i][1], arr[i][2] * tempo);
-        if (arr[i][1] !== 0) {
-          document.querySelector("[data-note=" + arr[i][0] + "]").classList.add('played');
+
+        if (setStop) {
+          arr = []
+          return
         }
-        setTimeout(function () {
+
+        if (arr.length > 0) {
+          playNote(arr[i][1], arr[i][2] * tempo);
+
           if (arr[i][1] !== 0) {
-            document.querySelector("[data-note=" + arr[i][0] + "]").classList.remove('played');
+            document.querySelector("[data-note=" + arr[i][0] + "]").classList.add('played');
           }
-          if (arr.length - 2 < i) {
-            e.target.classList.remove('on');
-            tempoInput.disabled = false;
-            demoButtons.forEach(function (btn) {
-              btn.disabled = false;
-            });
+        }
+
+        if (arr.length > 0) {
+          var gambiarra = arr[i][2] * tempo - 0.05
+        }
+
+        setTimeout(function () {
+          if (arr.length > 0) {
+            if (arr[i][1] !== 0) {
+              document.querySelector("[data-note=" + arr[i][0] + "]").classList.remove('played');
+            }
+            if (arr.length - 2 < i) {
+              e.target.classList.remove('on');
+              tempoInput.disabled = false;
+              demoButtons.forEach(function (btn) {
+                btn.disabled = false;
+              });
+            }
           }
-        }, arr[i][2] * tempo - 0.05);
+        }, gambiarra);
       }, noteLength);
+
     };
 
     for (var i = 1; i < arr.length; i++) {
@@ -127,8 +149,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+
+  // stop
+
+  var setStop = false
+
+  function stop() {
+    setStop = !setStop
+    tempoInput.disabled = false;
+    console.log(setStop)
+  }
+
+
   //map notes in song to frequencies
   function findFrequencies(song, e) {
+
     var arr = [];
     song.forEach(function (note) {
       frequencies.forEach(function (frequency) {
@@ -140,18 +175,25 @@ document.addEventListener("DOMContentLoaded", function () {
     demo(arr, e);
   }
 
+
+
   //play demo according to which one selected
   function demoHandler(e) {
     if (e.target.classList.contains('demo1')) {
+      setStop = false
       findFrequencies(noSuprises, e);
     }
     if (e.target.classList.contains('demo2')) {
+      setStop = false
       findFrequencies(lifeOnMars, e);
+
     }
     if (e.target.classList.contains('demo3')) {
+      setStop = false
       findFrequencies(furElise, e);
     }
     if (e.target.classList.contains('demo4')) {
+      setStop = false
       findFrequencies(theEntertainer, e);
     }
   }
@@ -207,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('keydown', keyDownSearch);
   tempoInput.addEventListener('change', updateTempo);
   volumeInput.addEventListener('change', updateVolume);
+  stopDemo.addEventListener('click', stop);
 
   //Hide keyboard help letters on load
   helpToggle();

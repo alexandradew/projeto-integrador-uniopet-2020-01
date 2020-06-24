@@ -355,3 +355,6 @@ input[type=range]:focus::-ms-fill-upper {
 .demo-button:hover{
     background-color:#9b59b6;
 }
+.record{
+    background-color:yellow !important;
+}
