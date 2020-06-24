@@ -72,3 +72,6 @@ function editAnuncio() {
 function showEditUser() {
     $('#painel-edit-user').toggle(1000);
 }
+
+
+//

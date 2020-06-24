@@ -2,6 +2,9 @@
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+html{scroll-behavior:smooth;}
+
+
 /* usuario e login */
 
 .hide{
